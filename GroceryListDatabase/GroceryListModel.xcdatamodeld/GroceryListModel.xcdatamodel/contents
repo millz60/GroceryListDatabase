@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15G31" minimumToolsVersion="Xcode 7.0">
+    <entity name="GroceryItem" representedClassName=".GroceryItem" syncable="YES">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="grocerylist" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GroceryList" inverseName="groceryItems" inverseEntity="GroceryList" syncable="YES"/>
+    </entity>
+    <entity name="GroceryList" representedClassName=".GroceryList" syncable="YES">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="groceryItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GroceryItem" inverseName="grocerylist" inverseEntity="GroceryItem" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="GroceryItem" positionX="-54" positionY="0" width="128" height="75"/>
+        <element name="GroceryList" positionX="-63" positionY="-18" width="128" height="75"/>
+    </elements>
+</model>
